@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+      .container_select{
+      margin: 2%;
+  display: flex;
+      justify-content: center;
+      } 
+      #brand{
+        width: 100%;
+       
+      }
+
+      .op {
+        text-transform: uppercase;
+      }
+      table{
+       width: 100%;
+       margin-top: 10%;
+       justify-content: center;
+       text-align: center;
+      }
+      @media screen and (max-width:800px) {
+        h3{
+            font-size: 17px;
+        }
+      }
+    </style>
+    
+</head>
+<html>
+
+<body>
+    <div class="container_select">
+   
+<form action="/user_form" method="post">
+    <!-- brand -->
+    <table>
+    <thead>
+        <th><h3><%= country.countryname %></h3></th>
+        <th><h3><%= types.brandname %></h3></th>
+        
+        <th><h3><%= year.yearName %></h3></th>
+
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <input list="countryname" name="brandcountry" id="brand" placeholder="Choose brand">
+            
+                <datalist id="countryname">
+                    <% country.countries.forEach((country)=>{%>
+                        <option class="op" value='<%=country%>'> <br>
+                    <%});%>
+                </datalist>
+              
+                </td>
+            <!--  -->
+            <td>
+                <input list="brandname" name="brandname" id="brand" placeholder="Choose brand">
+  
+      <datalist id="brandname">
+          <% types.brand.forEach((cartypes)=>{%>
+          <% Mfrid.mfriddata.forEach((id)=>{%>
+            
+              <option class="op" value='MfrID:<%=id%> <%=cartypes%>'> <br>
+          <%});%>
+          <%});%>
+      </datalist>
+    
+              </td>
+            <!-- 1 -->
+            <td>
+    <input list="yeardata" name="year" id="brand" placeholder="Choose brand">
+
+    <datalist id="yeardata">
+        <% year.yearValdata.forEach((yearVal)=>{%>
+            <option class="op" value='<%=yearVal%>'> <br>
+		<%});%>
+    </datalist>
+  
+            </td >
+            <!-- 2 -->
+            
+            <!-- 3 -->
+           
+              <!--  -->
+              
+        </tr>
+        <input type="submit" value="Send">
+    </tbody>
+    </table>
+    
+
+    
+     
+</form>
+    
+
+</div>
+
+ 
+</script>
+   <!-- <%- //include('./footer.ejs'); %> -->
+</body>
+</html>
+
+

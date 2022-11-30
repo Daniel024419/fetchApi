@@ -1,0 +1,4 @@
+requirement xampp
+* start xampp first to prevent database reading errors,
+database name is 'auto',you can see from database_conn.js file
+import the the sql file in this directory
