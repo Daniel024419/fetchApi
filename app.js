@@ -21,16 +21,6 @@ const fetchmanufactures =require('./fetchdata/fetchmanufactures');
 //consoling to the screen
 console.log(fetchmanufactures.fetchmanufactures());
 
-//importing the function / types
-const fetchtype =require('./fetchdata/fetchtype');
-//consoling to the screen
-console.log(fetchtype.fetchtype());
-
-//importing the function / types
-const fetchyear =require('./fetchdata/fetchyear');
-//consoling to the screen
-console.log(fetchyear.fetchyear());
-//
 // Start the server
 app.listen(PORT, err =>{
 	err ?
